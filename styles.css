@@ -63,7 +63,7 @@ html, body {
 /* ---------- Scroll-driven canvas section ---------- */
 .scroll-section {
   position: relative;
-  height: 500vh; /* scroll distance that drives the frame sequence */
+  height: 280vh; /* shortened scroll distance for faster pacing */
   background: var(--bg);
 }
 
@@ -93,6 +93,7 @@ html, body {
   pointer-events: none;
   width: 90%;
   max-width: 640px;
+  transition: opacity 0.1s linear;
 }
 
 .stage-caption--start {
@@ -111,8 +112,23 @@ html, body {
   font-size: 1rem;
 }
 
+.stage-caption--mid1,
+.stage-caption--mid2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.stage-caption--mid1 h2,
+.stage-caption--mid2 h2 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
 .stage-caption--end {
   bottom: 10%;
+  opacity: 0; /* hidden until scroll pushes it past 80% */
 }
 
 .stage-caption--end h2 {
@@ -138,6 +154,16 @@ html, body {
   width: 0%;
   background: var(--ink);
   border-radius: 2px;
+}
+
+/* ---------- Frame loader ---------- */
+.frame-loader {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  transition: opacity 0.3s ease;
 }
 
 /* ---------- Regular content sections ---------- */
