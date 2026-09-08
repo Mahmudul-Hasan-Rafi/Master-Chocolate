@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Scroll Story</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav id="nav" class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">PRODUCT</span>
+      <ul class="nav-links">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#cta">Get it</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="story" class="scroll-section">
+    <div class="sticky-stage">
+      <canvas id="frame-canvas"></canvas>
+
+      <div class="stage-caption stage-caption--start">
+        <h1>Introducing<br>Product</h1>
+        <p>Scroll to reveal it.</p>
+      </div>
+
+      <div class="stage-caption stage-caption--end">
+        <h2>Every detail, considered.</h2>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="content-section">
+    <h2>Built for the way you move.</h2>
+    <p>Placeholder copy about the product's materials, craftsmanship, and details. Replace with real content.</p>
+  </section>
+
+  <section id="cta" class="content-section content-section--cta">
+    <h2>Ready when you are.</h2>
+    <a class="btn" href="#">Shop now</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
