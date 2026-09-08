@@ -1,0 +1,186 @@
+:root {
+  --bg: #fafafa;
+  --ink: #1a1a1a;
+  --muted: #6b6b6f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+.nav.scrolled {
+  background: rgba(250, 250, 250, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover { opacity: 1; }
+
+/* ---------- Scroll-driven canvas section ---------- */
+.scroll-section {
+  position: relative;
+  height: 500vh; /* scroll distance that drives the frame sequence */
+  background: var(--bg);
+}
+
+.sticky-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+#frame-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--bg);
+}
+
+.stage-caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  width: 90%;
+  max-width: 640px;
+}
+
+.stage-caption--start {
+  top: 12%;
+}
+
+.stage-caption--start h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.stage-caption--start p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.stage-caption--end {
+  bottom: 10%;
+}
+
+.stage-caption--end h2 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.progress-track {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+/* ---------- Regular content sections ---------- */
+.content-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  gap: 20px;
+}
+
+.content-section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+  max-width: 640px;
+}
+
+.content-section p {
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.content-section--cta {
+  padding-bottom: 140px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
