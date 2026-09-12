@@ -1,60 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Master Chocolate — Scroll Story</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17100d">
+  <meta name="description" content="Master Chocolate — a cinematic cacao experience.">
+  <title>Master Chocolate — Cacao Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <nav id="nav" class="nav">
     <div class="nav-inner">
-      <span class="nav-logo">MASTER CHOCOLATE</span>
-      <ul class="nav-links">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#details">Details</a></li>
-        <li><a href="#cta">Get it</a></li>
-      </ul>
+      <a class="nav-logo" href="#story">MASTER CHOCOLATE</a>
+      <div class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#ingredients">Details</a>
+        <a href="#collection">Collection</a>
+        <a href="#cta">Get it</a>
+      </div>
     </div>
   </nav>
 
-  <section id="story" class="scroll-section">
+  <!-- HERO / EXISTING 96-FRAME SCROLL STORY -->
+  <section id="story" class="scroll-section desktop-hero">
     <div class="sticky-stage">
       <canvas id="frame-canvas"></canvas>
 
+      <div class="hero-word hero-word--left">YUMMY</div>
+      <div class="hero-word hero-word--right">Chocolaty</div>
+      <div class="hero-kicker">EST. 2020 · CACAO CRAFT</div>
+
       <div class="stage-caption stage-caption--start">
-        <h1>Introducing<br>Master Chocolate</h1>
+        <span class="eyebrow">THE MASTER COLLECTION</span>
+        <h1>Introducing<br><em>Master Chocolate</em></h1>
         <p>Scroll to reveal it.</p>
       </div>
 
       <div class="stage-caption stage-caption--mid1">
-        <h2>Every bar, hand-wrapped in gold foil.</h2>
+        <span class="eyebrow">THE REVEAL</span>
+        <h2>Open the ritual.<br><em>Meet the chocolate.</em></h2>
       </div>
 
       <div class="stage-caption stage-caption--mid2">
-        <h2>Crafted from rare cacao, blended with bold flavor.</h2>
+        <span class="eyebrow">CRAFTED WITH INTENT</span>
+        <h2>Rare cacao.<br>Bold, lingering flavor.</h2>
       </div>
 
       <div class="stage-caption stage-caption--end">
-        <h2>Every detail, considered.</h2>
+        <span class="eyebrow">MASTER CHOCOLATE</span>
+        <h2>Every detail,<br><em>considered.</em></h2>
       </div>
 
-      <div class="progress-track">
-        <div id="progress-fill" class="progress-fill"></div>
-      </div>
+      <div class="scroll-hint"><span></span> Keep scrolling</div>
+      <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
     </div>
   </section>
 
-  <section id="details" class="content-section">
-    <h2>Built for gifting.</h2>
-    <p>Placeholder copy about the product's materials, craftsmanship, and details. Replace with real content.</p>
+  <!-- MOBILE HERO / SEPARATE 3D PACKET EXPERIENCE -->
+  <section class="mobile-hero" aria-label="Master Chocolate mobile introduction">
+    <div class="mobile-hero-noise"></div>
+    <div class="mobile-topline"><span>MASTER CHOCOLATE</span><span>72% CACAO</span></div>
+    <div class="mobile-copy">
+      <span class="eyebrow">THE MASTER COLLECTION</span>
+      <h1>Meet<br><em>Master Chocolate.</em></h1>
+      <p>Slowly crafted. Boldly enjoyed.</p>
+    </div>
+    <div class="packet-wrap" aria-hidden="true">
+      <div class="packet-shadow"></div>
+      <div class="packet-3d">
+        <div class="packet-face packet-front"></div>
+        <div class="packet-face packet-back"></div>
+        <div class="packet-side packet-left"></div>
+        <div class="packet-side packet-right"></div>
+        <div class="packet-side packet-top"></div>
+        <div class="packet-side packet-bottom"></div>
+      </div>
+    </div>
+    <div class="mobile-word mobile-word--one">YUMMY</div>
+    <div class="mobile-word mobile-word--two">Chocolaty</div>
+    <div class="mobile-bottom"><span>SCROLL TO DISCOVER</span><i></i></div>
   </section>
 
-  <section id="cta" class="content-section content-section--cta">
-    <h2>Ready when you are.</h2>
-    <a class="btn" href="#">Shop now</a>
+  <!-- STATEMENT -->
+  <section class="statement-section">
+    <div class="giant-type" aria-hidden="true">CHOCOLATE</div>
+    <div class="statement-inner reveal">
+      <span class="eyebrow">01 / THE EXPERIENCE</span>
+      <h2>Not just a bar.<br><em>A moment worth slowing down for.</em></h2>
+      <p>Master Chocolate turns the simple act of opening a chocolate bar into a small ceremony — rich cacao, considered texture, and a finish that stays with you.</p>
+    </div>
   </section>
+
+  <!-- CACAO WORLD -->
+  <section class="cacao-section">
+    <div class="cacao-scene" aria-hidden="true">
+      <div class="cacao-ring"></div>
+      <div class="cacao-center"><span>72%</span><small>PURE CACAO</small></div>
+      <div class="cacao-orb cacao-orb--1"></div>
+      <div class="cacao-orb cacao-orb--2"></div>
+      <div class="cacao-orb cacao-orb--3"></div>
+      <div class="cacao-orb cacao-orb--4"></div>
+      <div class="cacao-orb cacao-orb--5"></div>
+      <div class="cacao-orb cacao-orb--6"></div>
+      <div class="cacao-orb cacao-orb--7"></div>
+      <div class="cacao-orb cacao-orb--8"></div>
+    </div>
+    <div class="cacao-copy reveal">
+      <span class="eyebrow">02 / CACAO WORLD</span>
+      <h2>Born where<br><em>cacao becomes character.</em></h2>
+      <p>Deep cocoa notes, restrained sweetness and a slow finish. A darker, more deliberate expression of chocolate.</p>
+    </div>
+  </section>
+
+  <!-- INGREDIENTS -->
+  <section id="ingredients" class="ingredients-section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">03 / THE MAKING</span>
+      <h2>Four simple things.<br><em>One unforgettable bar.</em></h2>
+    </div>
+
+    <div class="ingredient-stage">
+      <div class="ingredient-line ingredient-line--1"></div>
+      <div class="ingredient-line ingredient-line--2"></div>
+      <div class="ingredient-line ingredient-line--3"></div>
+      <div class="ingredient ingredient--cacao"><b>01</b><span>CACAO</span><small>Deep & aromatic</small></div>
+      <div class="ingredient ingredient--milk"><b>02</b><span>MILK</span><small>Silky & balanced</small></div>
+      <div class="ingredient ingredient--vanilla"><b>03</b><span>VANILLA</span><small>Warm & fragrant</small></div>
+      <div class="ingredient ingredient--butter"><b>04</b><span>COCOA BUTTER</span><small>Velvety finish</small></div>
+      <div class="ingredient-core"><div class="fake-bar"><span>MASTER</span><small>CHOCOLATE</small></div></div>
+    </div>
+  </section>
+
+  <!-- FLAVOR COLLECTION -->
+  <section id="collection" class="collection-section">
+    <div class="collection-heading reveal">
+      <span class="eyebrow">04 / THE COLLECTION</span>
+      <h2>Choose your<br><em>kind of indulgence.</em></h2>
+    </div>
+    <div class="flavor-track">
+      <article class="flavor-card flavor-card--dark">
+        <span class="flavor-number">01</span>
+        <div class="flavor-bar"><i></i><i></i><i></i></div>
+        <div><small>DARK</small><h3>72% Cacao</h3><p>Intense · Roasted · Long finish</p></div>
+      </article>
+      <article class="flavor-card flavor-card--milk">
+        <span class="flavor-number">02</span>
+        <div class="flavor-bar"><i></i><i></i><i></i></div>
+        <div><small>MILK</small><h3>Velvet Milk</h3><p>Soft · Creamy · Balanced</p></div>
+      </article>
+      <article class="flavor-card flavor-card--hazel">
+        <span class="flavor-number">03</span>
+        <div class="flavor-bar"><i></i><i></i><i></i></div>
+        <div><small>HAZELNUT</small><h3>Roasted Hazelnut</h3><p>Nutty · Toasted · Rich</p></div>
+      </article>
+      <article class="flavor-card flavor-card--caramel">
+        <span class="flavor-number">04</span>
+        <div class="flavor-bar"><i></i><i></i><i></i></div>
+        <div><small>CARAMEL</small><h3>Salted Caramel</h3><p>Buttery · Salty · Deep</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- BREAK APART -->
+  <section class="break-section">
+    <div class="break-copy reveal">
+      <span class="eyebrow">05 / BREAK THE ORDINARY</span>
+      <h2>Good chocolate<br><em>deserves your attention.</em></h2>
+    </div>
+    <div class="break-bar" id="break-bar" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="break-note">Scroll · Break · Taste</p>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="story-image">
+      <div class="story-image-inner"><span>MASTER</span><small>CHOCOLATE</small></div>
+      <div class="story-circle">SLOW<br>DOWN<br>FOR<br>GOOD<br>THINGS</div>
+    </div>
+    <div class="story-copy reveal">
+      <span class="eyebrow">06 / OUR STORY</span>
+      <h2>Crafted<br><em>with patience.</em></h2>
+      <p>We believe the best chocolate doesn't need to shout. It needs exceptional cacao, thoughtful proportions and enough time for every note to find its place.</p>
+      <div class="story-meta"><span>SMALL BATCH</span><span>CAREFULLY WRAPPED</span><span>MADE TO SHARE</span></div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta" class="cta-section">
+    <span class="eyebrow">07 / YOUR NEXT BITE</span>
+    <h2>Ready for<br><em>something richer?</em></h2>
+    <div class="cta-product">
+      <div class="cta-bar"><span>MASTER</span><small>CHOCOLATE</small></div>
+      <div class="cta-shadow"></div>
+    </div>
+    <p>MASTER CHOCOLATE · 72% CACAO</p>
+    <a class="btn" href="#story">Get yours <span>↗</span></a>
+  </section>
+
+  <footer>
+    <span>MASTER CHOCOLATE</span>
+    <span>Made for people who take chocolate seriously.</span>
+    <span>© 2026</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
